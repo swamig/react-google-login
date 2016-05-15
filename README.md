@@ -4,7 +4,7 @@
 
 ##Install dependences
 ``` npm install react ```
-``` npm install react-Google-login --save ```
+``` npm install react-google-login --save ```
 
 ## How to use
 ```JAVASCRIPT
@@ -20,10 +20,10 @@ var resultGoogleLogin = function( response ) {
 
 React.render(
   <Google
-        appId="1088597931155576"
+        clientId="1088597931155576"
         class="Google-login"
         scope="public_profile, email, user_birthday"
-        loginHandler={ resultGoogleLogin } />,
+        callback={ resultGoogleLogin } />,
 
   document.getElementById('Google-login'))
 
@@ -46,10 +46,10 @@ React.render(
 ##Parameters
 |    params    |   value  |             default value            |
 |:------------:|:--------:|:------------------------------------:|
-|     appId    |  string  |                  ""                  |
+|     clientId    |  string  |                  ""                  |
 |     class    |  string  |            Google-login            |
 |     scope    |  string  | public_profile, email, user_birthday |
-| loginHandler | function |          resultGoogleLogin         |
+|   callback   | function |          resultGoogleLogin         |
 |   autoLoad   |  boolean |                 false                |
 |     xfbml    |  boolean |                 false                |
 | callToAction |  string  |          Login with Google         |
