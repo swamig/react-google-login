@@ -11,7 +11,7 @@
 'use strict'
 
 var React = require('react'),
-    Google = require('react-Google-login');
+    Google = require('react-google-login');
 
 // Result response Google Login
 var resultGoogleLogin = function( response ) {
@@ -46,7 +46,7 @@ React.render(
 ##Parameters
 |    params    |   value  |             default value            |
 |:------------:|:--------:|:------------------------------------:|
-|     clientId    |  string  |                  ""                  |
+|     clientId |  string  |                  ""                  |
 |     class    |  string  |            Google-login            |
 |     scope    |  string  | public_profile, email, user_birthday |
 |   callback   | function |          resultGoogleLogin         |
