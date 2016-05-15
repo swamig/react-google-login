@@ -4,14 +4,14 @@
 
 ##Install dependences
 ``` npm install react ```
-``` npm install react-Google-login --save ```
+``` npm install react-google-login --save ```
 
 ## How to use
 ```JAVASCRIPT
 'use strict'
 
 var React = require('react'),
-    Google = require('react-Google-login');
+    Google = require('react-google-login');
 
 // Result response Google Login
 var resultGoogleLogin = function( response ) {
@@ -20,10 +20,10 @@ var resultGoogleLogin = function( response ) {
 
 React.render(
   <Google
-        appId="1088597931155576"
-        class="Google-login"
+        clientId="1088597931155576"
+        cssClass="Google-login"
         scope="public_profile, email, user_birthday"
-        loginHandler={ resultGoogleLogin } />,
+        callback={ resultGoogleLogin } />,
 
   document.getElementById('Google-login'))
 
@@ -42,14 +42,18 @@ React.render(
 </html>
 
 ```
+If you want to show an icon insted of text. Just do this: 
+```javascript
+buttonText={<i className="fa fa-google"></i>}
+```
 
 ##Parameters
 |    params    |   value  |             default value            |
 |:------------:|:--------:|:------------------------------------:|
-|     appId    |  string  |                  ""                  |
-|     class    |  string  |            Google-login            |
-|     scope    |  string  | public_profile, email, user_birthday |
-| loginHandler | function |          resultGoogleLogin         |
-|   autoLoad   |  boolean |                 false                |
-|     xfbml    |  boolean |                 false                |
-| callToAction |  string  |          Login with Google         |
+| clientId     |  string  |                  ""                  |
+| cssClass     |  string  |            Google-login              |
+| scope        |  string  | public_profile, email, user_birthday |
+| callback     | function |          resultGoogleLogin           |
+| autoLoad     |  boolean |                 false                |
+| xfbml        |  boolean |                 false                |
+| buttonText   |  string  |          Login with Google           |
