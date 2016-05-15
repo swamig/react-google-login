@@ -21,7 +21,7 @@ var resultGoogleLogin = function( response ) {
 React.render(
   <Google
         clientId="1088597931155576"
-        class="Google-login"
+        cssClass="Google-login"
         scope="public_profile, email, user_birthday"
         callback={ resultGoogleLogin } />,
 
@@ -42,14 +42,18 @@ React.render(
 </html>
 
 ```
+If you want to show an icon insted of text. Just do this: 
+```javascript
+buttonText={<i className="fa fa-google"></i>}
+```
 
 ##Parameters
 |    params    |   value  |             default value            |
 |:------------:|:--------:|:------------------------------------:|
-|     clientId |  string  |                  ""                  |
-|     class    |  string  |            Google-login            |
-|     scope    |  string  | public_profile, email, user_birthday |
-|   callback   | function |          resultGoogleLogin         |
-|   autoLoad   |  boolean |                 false                |
-|     xfbml    |  boolean |                 false                |
-| callToAction |  string  |          Login with Google         |
+| clientId     |  string  |                  ""                  |
+| cssClass     |  string  |            Google-login              |
+| scope        |  string  | public_profile, email, user_birthday |
+| callback     | function |          resultGoogleLogin           |
+| autoLoad     |  boolean |                 false                |
+| xfbml        |  boolean |                 false                |
+| buttonText   |  string  |          Login with Google           |
